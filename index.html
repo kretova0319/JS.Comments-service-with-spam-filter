@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сервис комментариев со спам-фильтром</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="wrapper">
+      <h1>Сервис комментариев со спам фильтром</h1>
+      <div class="container">
+        <section class="comments">
+          <h2>Оставьте ваш комментарий</h2>
+          <form>
+            <div class="radio">
+              <p class="radio_ask">Показывать ваше имя?</p>
+              <label for="radioyes">
+                <p class="radio_answer">Yes</p>
+              </label>
+              <input
+                class="radio_answerbox"
+                type="radio"
+                name="user"
+                value="yes"
+                id="radioyes"
+                onchange="Selected(this)"
+              />
+              <label for="radiono">
+                <p class="radio_answer">No</p>
+              </label>
+              <input
+                class="radio_answerbox"
+                type="radio"
+                name="user"
+                value="no"
+                id="radiono"
+                onchange="Selected(this)"
+              />
+            </div>
+            <label id="nameLabel" for="name">
+              Введите ваше Имя:
+              <input
+                class="comment"
+                type="text"
+                placeholder=""
+                id="name"
+                maxlength="10"
+              />
+            </label>
+
+            <label for="avatar">
+              Введите ссылку вашего аватара
+              <input
+                class="comment"
+                type="url"
+                placeholder="http://example.com"
+                id="avatar"
+              />
+            </label>
+
+            <label for="comment">
+              Оставьте комментарий:
+              <textarea class="comment" name="comment" id="comment"></textarea>
+            </label>
+
+            <button id="btn" type="submit">Отправить</button>
+          </form>
+        </section>
+        <section class="chat">
+          <h2>Чат</h2>
+          <div class="info">
+            <!-- <div class="info_main">  - эту структуру создаем в js
+              <img id="chatImg" src="" alt="" />
+              <span id="chatName"></span>
+              <span id="chatTime"></span>
+            </div>
+            <p id="chatComment"></p> -->
+          </div>
+        </section>
+      </div>
+    </section>
+    <script src="week12_star_full.js"></script>
+  </body>
+</html>
